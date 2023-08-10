@@ -30,7 +30,7 @@ function findActiveIndex() {
   }
 
 
-//FLECHE DROITE
+// FLECHE DROITE
 
 	arrowRight.addEventListener("click",function () {	
 		let activeIndex=findActiveIndex();
@@ -48,7 +48,7 @@ function findActiveIndex() {
 		}
 	});
 
-//FLECHE GAUCHE
+// FLECHE GAUCHE
 
 	arrowLeft.addEventListener("click",function () {
 		let activeIndex=findActiveIndex();
@@ -66,6 +66,7 @@ function findActiveIndex() {
 	}
 });
 
+// BULLETS POINTS
 
 for (let i = 0; i < dots.length; i++) {
 	dots[i].addEventListener("click",function (informationClick) {	
@@ -73,6 +74,5 @@ for (let i = 0; i < dots.length; i++) {
 		document.getElementById(informationClick.target.id) .classList.add ("dot_selected");
 			document.querySelector (".banner-img").src='./assets/images/slideshow/'+slides[findActiveIndex()].image;
 			document.querySelector ("#banner p").innerHTML=slides[findActiveIndex()].tagLine; 
-		
 	});
-	}
+}
